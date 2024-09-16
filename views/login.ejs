@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BRICHAS AJIRA - Login</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Login</h1>
+  <% if (message) { %>
+    <p style="color:red;"><%= message %></p>
+  <% } %>
+  <form action="/login" method="POST">
+    <label for="fullname">Fullname or Username:</label><br>
+    <input type="text" name="fullname" required><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" name="password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+  <p>If you don't have an account, <a href="/signup">Sign Up</a></p>
+</body>
+</html>

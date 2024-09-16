@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - BRICHAS AJIRA</title>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Customer ID</th>
+      <th>Fullname</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Address</th>
+      <th>Education Level</th>
+      <th>Certificate</th>
+      <th>CV</th>
+      <th>First Job Type</th>
+      <th>Second Job Type</th>
+      <th>Actions</th>
+    </tr>
+    <% applications.forEach(function(app) { %>
+    <tr>
+      <td><%= app.id %></td>
+      <td><%= app.customer_id %></td>
+      <td><%= app.fullname %></td>
+      <td><%= app.age %></td>
+      <td><%= app.gender %></td>
+      <td><%= app.address %></td>
+      <td><%= app.education_level %></td>
+      <td>
+        <% if (app.certificate) { %>
+          <a href="/uploads/<%= app.certificate %>" target="_blank">View</a>
+        <% } else { %>
+          N/A
+        <% } %>
+      </td>
+      <td>
+        <% if (app.cv) { %>
+          <a href="/uploads/<%= app.cv %>" target="_blank">View</a>
+        <% } else { %>
+          N/A
+        <% } %>
+      </td>
+      <td><%= app.first_job_type %></td>
+      <td><%= app.second_job_type %></td>
+      <td>
+        <a href="/admin/edit/<%= app.id %>">Edit</a> |
+        <a href="/admin/delete/<%= app.id %>" onclick="return confirm('Are you sure?')">Delete</a>
+      </td>
+    </tr>
+    <% }); %>
+  </table>
+  <p><a href="/logout">Logout</a></p>
+</body>
+</html>

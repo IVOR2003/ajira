@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BRICHAS AJIRA - Job Application</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>Job Application Form</h1>
+  <% if (message) { %>
+    <p style="color:green;"><%= message %></p>
+  <% } %>
+  <form action="/application" method="POST" enctype="multipart/form-data">
+    <label for="fullname">Fullname:</label><br>
+    <input type="text" name="fullname" required><br><br>
+    <label for="age">Age:</label><br>
+    <input type="number" name="age" required><br><br>
+    <label for="gender">Gender:</label><br>
+    <select name="gender" required>
+      <option value="">--Select Gender--</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select><br><br>
+    <label for="address">Address:</label><br>
+    <input type="text" name="address" required><br><br>
+    <label for="education_level">Education Level:</label><br>
+    <input type="text" name="education_level" required><br><br>
+    <label for="certificate">Upload Education Certificate (Optional):</label><br>
+    <input type="file" name="certificate"><br><br>
+    <label for="cv">Upload CV (Optional):</label><br>
+    <input type="file" name="cv"><br><br>
+    <label for="first_job_type">First Job Type:</label><br>
+    <input type="text" name="first_job_type" required><br><br>
+    <label for="second_job_type">Second Job Type:</label><br>
+    <input type="text" name="second_job_type" required><br><br>
+    <button type="submit">Submit Application</button>
+  </form>
+  <p><a href="/logout">Logout</a></p>
+</body>
+</html>

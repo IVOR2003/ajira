@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRICHAS AJIRA - Customer Dashboard</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <img src="/images/logo.png" alt="BRICHAS AJIRA Logo"> <!-- Logo -->
+                </div>
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/support">Support</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <h1>Welcome, <%= user.fullname %>!</h1>
+            <p>Here you can manage your profile and job applications.</p>
+            <div class="dashboard-actions">
+                <a href="/C:\Users\Lenovo\Desktop\watu\brichas-ajira\views\application.ejs" class="btn">Apply for Jobs</a>
+                <a href="/edit-profile" class="btn">Edit Profile</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
