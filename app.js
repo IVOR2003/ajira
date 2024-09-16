@@ -23,14 +23,14 @@ app.use(session({
 }));
 
 // Database connection
-const db = mysql.createConnection({
-  host: 'sql212.byetcluster.com',
-  user: 'if0_37319705',
-  password: 'TBjptHBN4Vkn',
-  database: 'if0_37319705_ajira',
-  connectTimeout: 20000 // Set timeout to 20 seconds
-});
 
+const db = mysql.createConnection({
+  host: 'sql8.freesqldatabase.com',
+  user: 'sql8731666',
+  password: 'lwjw2V5vGU',
+  database: 'sql8731666',
+  port: 3306
+});
 
 db.connect((err) => {
   if (err) throw err;
