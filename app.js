@@ -24,11 +24,13 @@ app.use(session({
 
 // Database connection
 const db = mysql.createConnection({
-  host: 'sql212.infinityfree.com',
+  host: 'sql212.byetcluster.com',
   user: 'if0_37319705',
   password: 'TBjptHBN4Vkn',
-  database: 'if0_37319705_ajira'
+  database: 'if0_37319705_ajira',
+  connectTimeout: 20000 // Set timeout to 20 seconds
 });
+
 
 db.connect((err) => {
   if (err) throw err;
