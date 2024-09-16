@@ -24,10 +24,10 @@ app.use(session({
 
 // Database connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'brichas_ajira'
+  host: 'sql212.infinityfree.com',
+  user: 'if0_37319705',
+  password: 'TBjptHBN4Vkn',
+  database: 'if0_37319705_ajira'
 });
 
 db.connect((err) => {
